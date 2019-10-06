@@ -11,15 +11,18 @@
   src: url("../font/futurabookc.otf"); }
 
 body {
-  background: #252525;
+  background-color: #1f1f1f;
   display: -ms-grid;
   display: grid;
   margin: 0;
   -ms-grid-columns: 4.8vw 1fr 4.8vw;
   grid-template-columns: 4.8vw 1fr 4.8vw;
-  opacity: 0.57;
+  opacity: 0.7;
   font-family: FuturaBookC;
-  font-size: 3.73333vw; }
+  color: white;
+  text-align: center;
+  font-size: 3.73333vw;
+  line-height: 5.86667vw; }
 
 .h2_text {
   -webkit-margin-before: 0;
@@ -32,6 +35,21 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 6.13333vw;
+  line-height: 8vw;
+  text-transform: uppercase;
+  color: #E3B873;
+  margin: 0;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
+
+.h3_text {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  font-size: 3.73333vw;
+  font-family: YesevaOne;
   text-transform: uppercase;
   color: #E3B873;
   margin: 0; }
@@ -67,7 +85,9 @@ header {
   color: #FFFFFF;
   height: 13.6vw;
   font-family: FuturaDemiC;
-  text-align: center; }
+  text-align: center;
+  font-size: 3.46667vw;
+  cursor: pointer; }
 
 .button_transparent {
   background: transparent;
@@ -75,19 +95,33 @@ header {
   color: #FFFFFF;
   height: 13.6vw;
   font-family: FuturaDemiC;
-  text-align: center; }
+  text-align: center;
+  font-size: 3.46667vw;
+  cursor: pointer; }
+
+.button_round {
+  width: 9.6vw;
+  height: 9.6vw;
+  cursor: pointer;
+  background: #E3B873;
+  border-radius: 50%;
+  border-width: 0;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .offer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
   background-image: url(../images/background.png);
-  background-size: 100%;
+  background-size: cover;
   height: 126.93333vw; }
 
 .offer_substate {
   position: absolute;
-  height: inherit;
+  height: 126.93333vw;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid #000000;
@@ -117,8 +151,59 @@ header {
     font-size: 4.8vw;
     font-weight: normal;
     margin-top: 4.26667vw;
-    color: white; }
+    color: white;
+    text-align: left; }
   .offer_substate .button_yellow {
     margin-top: 8.53333vw; }
   .offer_substate .button_transparent {
     margin-top: 6.93333vw; }
+
+.example {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .example .name_block {
+    padding-top: 9.6vw;
+    line-height: 8vw; }
+  .example .project_description {
+    margin-top: 5.86667vw; }
+  .example .gallery {
+    margin-top: 9.6vw;
+    background-image: url(../images/example/image-1.png);
+    background-size: cover;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 64.4vw; }
+    .example .gallery img {
+      width: 1.66933vw;
+      height: 2.92267vw; }
+    .example .gallery .left {
+      margin-left: 3.73333vw; }
+    .example .gallery .right {
+      margin-right: 3.73333vw;
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+      -ms-grid-column-align: end;
+      justify-self: end; }
+  .example .pulce {
+    margin-top: 9.72vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; }
+  .example .pulce_desc {
+    display: -ms-grid;
+    display: grid;
+    justify-items: flex-start; }
