@@ -4,14 +4,20 @@
 }
 
 @mixin display_field{
-    grid-template-columns: 18/375*100% 1fr 18/375*100%;
+    grid-template-columns: size-vw(18) 1fr size-vw(18);
 }
 
 @mixin header_text{
     font-family: FuturaDemiC;
-    font-size: 12/375*100vw;
-    line-height: 14/375*100vw;
-    margin-top: 23/375*100vw;
+    font-size: size-vw(12);
+    margin-top: size-vw(23);
+}
+
+@mixin text_button{
+    color: #FFFFFF;
+    height: size-vw(51);
+    font-family: FuturaDemiC;
+    text-align: center;
 }
 
 @font-face{
@@ -19,18 +25,51 @@
     src: url("../font/futuredemic.otf");
 }
 
+@font-face{
+    font-family: 'YesevaOne';
+    src: url("../font/YesevaOne-Regular_v2.otf");
+}
+
+@font-face{
+    font-family: 'FuturaBookC';
+    src: url("../font/futurabookc.otf");
+}
+
+@function size-vw($size){
+    @return $size/375*100vw;
+}
+
 $yellow-color: #E3B873;
+
+
 
 body{
     background: #252525;
     display: grid;
     margin: 0;
     @include display_field;
+    opacity: 0.57;
+    font-family: FuturaBookC;
+    font-size: size-vw(14);
+}
+
+.h2_text{
+    margin-block-start:0;
+    margin-block-end:0;
+    font-size: size-vw(22);
+    text-align: center;
+    font-family: YesevaOne;
+    font-style: normal;
+    font-weight: normal;
+    font-size: size-vw(23);
+    text-transform: uppercase;
+    color: $yellow-color;
+    margin: 0;
 }
 
 header{
     width: 100%;
-    height: 57/375*100vw;
+    height: size-vw(57);
     grid-column: 2/3;
     @include grid_2column;
     grid-template-columns: 60% 40%;
@@ -41,7 +80,7 @@ header{
     }
     .cellphone{
         @include header_text;
-        color: #FFFFFF;
+        color: white;
         text-align: right;
     }
 }
@@ -49,21 +88,60 @@ header{
 .button_yellow{
     background: $yellow-color;
     border: 0;
-    height: 51px;
+    @include text_button;
 }
 
 .button_transparent{
     background: transparent;
-    border: 1px solid #FFFFFF;
-    height: 51px
+    border: 1px solid white;
+    @include text_button;
 }
 
-.calculate{
+.offer{
     grid-column: 1/4;
-    display: grid;
+    background-image: url(../images/background.png);
+    background-size: 100%;
+    height: size-vw(476);
+}
+
+.offer_substate{
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include display_field;
-    grid-template-rows: repeat(4,1fr);
+    display: grid;
+    grid-template-rows: size-vw(145) size-vw(110) size-vw(83) size-vw(112);
+    
     h2,span,button{
         grid-column: 2/3;
     }
+    h2{
+        text-align: left;
+        font-size: size-vw(23);
+        margin-top: size-vw(85);
+        span{
+            color: white;
+        }
+    }
+    .offer_description{
+        font-family: FuturaBookC;
+        width: size-vw(290);
+        font-size: size-vw(18);
+        font-weight: normal;
+        margin-top: size-vw(16);
+        color: white;
+    }
+    
+    .button_yellow{
+        margin-top: size-vw(32);
+    }
+    
+    .button_transparent{
+        margin-top: size-vw(26);
+    }
 }
+

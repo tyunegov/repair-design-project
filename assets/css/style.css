@@ -2,13 +2,39 @@
   font-family: 'FuturaDemic';
   src: url("../font/futuredemic.otf"); }
 
+@font-face {
+  font-family: 'YesevaOne';
+  src: url("../font/YesevaOne-Regular_v2.otf"); }
+
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url("../font/futurabookc.otf"); }
+
 body {
   background: #252525;
   display: -ms-grid;
   display: grid;
   margin: 0;
-  -ms-grid-columns: 4.8% 1fr 4.8%;
-  grid-template-columns: 4.8% 1fr 4.8%; }
+  -ms-grid-columns: 4.8vw 1fr 4.8vw;
+  grid-template-columns: 4.8vw 1fr 4.8vw;
+  opacity: 0.57;
+  font-family: FuturaBookC;
+  font-size: 3.73333vw; }
+
+.h2_text {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  font-size: 5.86667vw;
+  text-align: center;
+  font-family: YesevaOne;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6.13333vw;
+  text-transform: uppercase;
+  color: #E3B873;
+  margin: 0; }
 
 header {
   width: 100%;
@@ -25,39 +51,74 @@ header {
   header h1 {
     font-family: FuturaDemiC;
     font-size: 3.2vw;
-    line-height: 3.73333vw;
     margin-top: 6.13333vw;
     color: #E3B873;
     text-transform: uppercase; }
   header .cellphone {
     font-family: FuturaDemiC;
     font-size: 3.2vw;
-    line-height: 3.73333vw;
     margin-top: 6.13333vw;
-    color: #FFFFFF;
+    color: white;
     text-align: right; }
 
 .button_yellow {
   background: #E3B873;
   border: 0;
-  height: 51px; }
+  color: #FFFFFF;
+  height: 13.6vw;
+  font-family: FuturaDemiC;
+  text-align: center; }
 
 .button_transparent {
   background: transparent;
-  border: 1px solid #FFFFFF;
-  height: 51px; }
+  border: 1px solid white;
+  color: #FFFFFF;
+  height: 13.6vw;
+  font-family: FuturaDemiC;
+  text-align: center; }
 
-.calculate {
+.offer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
+  background-image: url(../images/background.png);
+  background-size: 100%;
+  height: 126.93333vw; }
+
+.offer_substate {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -ms-grid-columns: 4.8vw 1fr 4.8vw;
+  grid-template-columns: 4.8vw 1fr 4.8vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 4.8% 1fr 4.8%;
-  grid-template-columns: 4.8% 1fr 4.8%;
-  -ms-grid-rows: (1fr)[4];
-  grid-template-rows: repeat(4, 1fr); }
-  .calculate h2, .calculate span, .calculate button {
+  -ms-grid-rows: 38.66667vw 29.33333vw 22.13333vw 29.86667vw;
+  grid-template-rows: 38.66667vw 29.33333vw 22.13333vw 29.86667vw; }
+  .offer_substate h2, .offer_substate span, .offer_substate button {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3; }
+  .offer_substate h2 {
+    text-align: left;
+    font-size: 6.13333vw;
+    margin-top: 22.66667vw; }
+    .offer_substate h2 span {
+      color: white; }
+  .offer_substate .offer_description {
+    font-family: FuturaBookC;
+    width: 77.33333vw;
+    font-size: 4.8vw;
+    font-weight: normal;
+    margin-top: 4.26667vw;
+    color: white; }
+  .offer_substate .button_yellow {
+    margin-top: 8.53333vw; }
+  .offer_substate .button_transparent {
+    margin-top: 6.93333vw; }
