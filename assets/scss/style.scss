@@ -1,54 +1,10 @@
-@mixin grid_2column{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-}
-@mixin display_field{
-    grid-template-columns: size-vw(18) 1fr size-vw(18);
-}
-@mixin header_text{
-    font-family: FuturaDemiC;
-    font-size: size-vw(12);
-    margin-top: size-vw(23);
-}
-@mixin text_button{
-    color: #FFFFFF;
-    height: size-vw(51);
-    font-family: FuturaDemiC;
-    text-align: center;
-    font-size: size-vw(13);
-}
-@mixin button_arrow{
-    img{
-        width: size-vw(6.26);
-        height: size-vw(10.96);
-    }
-    .left{
-        margin-left: size-vw(14);
-    }
-    .right{
-        margin-right: size-vw(14);
-        transform: rotate(-180deg);
-        justify-self: end;
-    }
-}
-@font-face{
-    font-family: 'FuturaDemic';
-    src: url("../font/futuredemic.otf");
-}
-@font-face{
-    font-family: 'YesevaOne';
-    src: url("../font/YesevaOne-Regular_v2.otf");
-}
-@font-face{
-    font-family: 'FuturaBookC';
-    src: url("../font/futurabookc.otf");
-}
-@function size-vw($size){
-    @return $size/375*100vw;
-}
-$yellow-color: #E3B873;
-
-
+@import 'abstracts/variables';
+@import 'abstracts/mixin';
+@import 'abstracts/function';
+@import 'base/font';
+@import 'components/h';
+@import 'components/button';
+@import 'layout/header';
 
 body{
     background-color: mix(#252525, #181818);
@@ -59,89 +15,29 @@ body{
     font-family: FuturaBookC;
     color: white;
     text-align: center;
-    font-size: size-vw(14);
-    line-height: size-vw(22);
+    font-size: size-375(14);
+    line-height: size-375(22);
 }
 
-.h2_text{
-    margin-block-start:0;
-    margin-block-end:0;
-    font-size: size-vw(22);
-    text-align: center;
-    font-family: YesevaOne;
-    font-style: normal;
-    font-weight: normal;
-    font-size: size-vw(23);
-    line-height: size-vw(30);
-    text-transform: uppercase;
-    color: $yellow-color;
-    margin: 0;
-    align-self: center;
-}
-
-.h3_text{
-    margin-block-start:0;
-    margin-block-end:0;
-    font-size: size-vw(14);
-    font-family: YesevaOne;
-    text-transform: uppercase;
-    color: $yellow-color;
-    margin: 0;
-}
-
-header{
-    width: 100%;
-    height: size-vw(57);
+section, form{
     grid-column: 2/3;
-    @include grid_2column;
-    grid-template-columns: 60% 40%;
-    h1{
-        @include header_text;
-        color: $yellow-color;
-        text-transform: uppercase;
-    }
-    .cellphone{
-        @include header_text;
-        color: white;
-        text-align: right;
-    }
 }
 
-.button_yellow{
-    background: $yellow-color;
-    border: 0;
-    @include text_button;
-    cursor:pointer;
-}
-
-.button_transparent{
-    background: transparent;
-    border: 1px solid white;
-    @include text_button;
-    cursor:pointer;
-}
-
-.button_round{
-    width: size-vw(36);
-    height: size-vw(36);
-    cursor: pointer;
-    background: $yellow-color;
-    border-radius: 50%;
-    border-width: 0;
-    text-align: center;
-    justify-content: center;
+.line{
+            height: size-375(2);
+            border-bottom: size-375(2) solid $yellow-color;
 }
 
 .offer{
     grid-column: 1/4;
     background-image: url(../images/background.png);
     background-size: cover;
-    height: size-vw(476);
+    height: size-375(476);
 }
 
 .offer_substate{
     position: absolute;
-    height: size-vw(476);
+    height: size-375(476);
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid #000000;
@@ -149,68 +45,109 @@ header{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include display_field;
     display: grid;
-    grid-template-rows: size-vw(145) size-vw(110) size-vw(83) size-vw(112);
+    grid-template-rows: size-375(145) size-375(110) size-375(83) size-375(112);
     
     h2,span,button{
         grid-column: 2/3;
     }
     h2{
         text-align: left;
-        font-size: size-vw(23);
-        margin-top: size-vw(85);
+        font-size: size-375(23);
+        margin-top: size-375(85);
         span{
             color: white;
         }
     }
     .offer_description{
         font-family: FuturaBookC;
-        width: size-vw(290);
-        font-size: size-vw(18);
+        width: size-375(290);
+        font-size: size-375(18);
         font-weight: normal;
-        margin-top: size-vw(16);
+        margin-top: size-375(16);
         color: white;
         text-align: left;
     }
     
     .button_yellow{
-        margin-top: size-vw(32);
+        margin-top: size-375(32);
     }
     
     .button_transparent{
-        margin-top: size-vw(26);
+        margin-top: size-375(26);
     }
 }
 
 .example{
-    grid-column: 2/3;
     display: grid;
     justify-content: center;
     text-align: center;
     .name_block{
-        padding-top: size-vw(36);
-        line-height: size-vw(30);
+        padding-top: size-375(36);
+        line-height: size-375(30);
     }
     .project_description{
-        margin-top: size-vw(22);
+        margin-top: size-375(22);
     }
     .gallery{
-        margin-top: size-vw(36);
+        margin-top: size-375(36);
         background-image: url(../images/example/image-1.png);
         background-size: cover;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        height: size-vw(241.5);
+        height: size-375(241.5);
         @include button_arrow;
     }
     .pulce{
-        margin-top: size-vw(36.45);
+        margin-top: size-375(36.45);
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .pulce_desc{
         display: grid;
         justify-items: flex-start;
+        
+        span{
+            text-align: left;
+        }
     }
     
+}
+
+.control{
+    margin-top: size-375(57);
+    display: grid;
+}
+
+.control_video{
+    margin-top: size-375(40.2);
+    width: size-375(320);
+    height: size-375(207);
+}
+
+.control_separator{
+    justify-self: center;
+    margin-top: size-375(28);
+    margin-bottom: size-375(22);
+    width: size-375(55);
+}
+
+.header_section
+{
+    h2{
+        color: white;
+        grid-column:1/4;
+        text-align: center;
+    }
+    .header_section_logo{
+        margin-top: size-375(13);
+        display: grid;
+        grid-template-columns: size-375(32) size-375(32.77+9.47*2) size-375(32);
+        justify-content: center;
+        align-items: center;
+        .logo{
+            width: size-375(32.77);
+            margin: auto size-375(9.47);
+        }
+    }
 }

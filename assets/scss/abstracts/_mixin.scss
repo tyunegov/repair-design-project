@@ -1,0 +1,33 @@
+@mixin grid_2column{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+@mixin display_field{
+    grid-template-columns: size-375(18) 1fr size-375(18);
+}
+@mixin header_text{
+    font-family: FuturaDemiC;
+    font-size: size-375(12);
+    margin-top: size-375(23);
+}
+@mixin text_button{
+    color: #FFFFFF;
+    height: size-375(51);
+    font-family: FuturaDemiC;
+    text-align: center;
+    font-size: size-375(13);
+}
+@mixin button_arrow{
+    img{
+        width: size-375(6.26);
+        height: size-375(10.96);
+    }
+    .left{
+        margin-left: size-375(14);
+    }
+    .right{
+        margin-right: size-375(14);
+        transform: rotate(-180deg);
+        justify-self: end;
+    }
+}

@@ -10,21 +10,7 @@
   font-family: 'FuturaBookC';
   src: url("../font/futurabookc.otf"); }
 
-body {
-  background-color: #1f1f1f;
-  display: -ms-grid;
-  display: grid;
-  margin: 0;
-  -ms-grid-columns: 4.8vw 1fr 4.8vw;
-  grid-template-columns: 4.8vw 1fr 4.8vw;
-  opacity: 0.7;
-  font-family: FuturaBookC;
-  color: white;
-  text-align: center;
-  font-size: 3.73333vw;
-  line-height: 5.86667vw; }
-
-.h2_text {
+h2 {
   -webkit-margin-before: 0;
   margin-block-start: 0;
   -webkit-margin-after: 0;
@@ -43,7 +29,7 @@ body {
   -ms-grid-row-align: center;
   align-self: center; }
 
-.h3_text {
+h3 {
   -webkit-margin-before: 0;
   margin-block-start: 0;
   -webkit-margin-after: 0;
@@ -53,31 +39,6 @@ body {
   text-transform: uppercase;
   color: #E3B873;
   margin: 0; }
-
-header {
-  width: 100%;
-  height: 15.2vw;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (50%)[2];
-  grid-template-columns: repeat(2, 50%);
-  -ms-grid-columns: 60% 40%;
-  grid-template-columns: 60% 40%; }
-  header h1 {
-    font-family: FuturaDemiC;
-    font-size: 3.2vw;
-    margin-top: 6.13333vw;
-    color: #E3B873;
-    text-transform: uppercase; }
-  header .cellphone {
-    font-family: FuturaDemiC;
-    font-size: 3.2vw;
-    margin-top: 6.13333vw;
-    color: white;
-    text-align: right; }
 
 .button_yellow {
   background: #E3B873;
@@ -100,6 +61,8 @@ header {
   cursor: pointer; }
 
 .button_round {
+  /*  width: size-1440(54.72);
+    height: size-1440(54.72);*/
   width: 9.6vw;
   height: 9.6vw;
   cursor: pointer;
@@ -110,6 +73,59 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media (max-width: 375px) {
+    .button_round {
+      width: 9.6vw;
+      height: 9.6vw; } }
+
+header {
+  width: 100%;
+  height: 15.2vw;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+  grid-template-columns: repeat(2, 50%);
+  -ms-grid-columns: 60% 40%;
+  grid-template-columns: 60% 40%; }
+  header h1 {
+    font-family: FuturaDemiC;
+    font-size: 3.2vw;
+    margin-top: 6.13333vw;
+    color: #E3B873;
+    text-align: left;
+    text-transform: uppercase; }
+  header .cellphone {
+    font-family: FuturaDemiC;
+    font-size: 3.2vw;
+    margin-top: 6.13333vw;
+    color: white;
+    text-align: right; }
+
+body {
+  background-color: #1f1f1f;
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  -ms-grid-columns: 4.8vw 1fr 4.8vw;
+  grid-template-columns: 4.8vw 1fr 4.8vw;
+  opacity: 0.7;
+  font-family: FuturaBookC;
+  color: white;
+  text-align: center;
+  font-size: 3.73333vw;
+  line-height: 5.86667vw; }
+
+section, form {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3; }
+
+.line {
+  height: 0.53333vw;
+  border-bottom: 0.53333vw solid #E3B873; }
 
 .offer {
   -ms-grid-column: 1;
@@ -159,9 +175,6 @@ header {
     margin-top: 6.93333vw; }
 
 .example {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -207,3 +220,45 @@ header {
     display: -ms-grid;
     display: grid;
     justify-items: flex-start; }
+    .example .pulce_desc span {
+      text-align: left; }
+
+.control {
+  margin-top: 15.2vw;
+  display: -ms-grid;
+  display: grid; }
+
+.control_video {
+  margin-top: 10.72vw;
+  width: 85.33333vw;
+  height: 55.2vw; }
+
+.control_separator {
+  -ms-grid-column-align: center;
+  justify-self: center;
+  margin-top: 7.46667vw;
+  margin-bottom: 5.86667vw;
+  width: 14.66667vw; }
+
+.header_section h2 {
+  color: white;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  text-align: center; }
+
+.header_section .header_section_logo {
+  margin-top: 3.46667vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 8.53333vw 13.78933vw 8.53333vw;
+  grid-template-columns: 8.53333vw 13.78933vw 8.53333vw;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .header_section .header_section_logo .logo {
+    width: 8.73867vw;
+    margin: auto 2.52533vw; }

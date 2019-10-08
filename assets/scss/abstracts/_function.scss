@@ -1,0 +1,7 @@
+@function size-375($size){
+    @return $size/375*100vw;
+}
+
+@function size-1440($size){
+    @return $size/1440*100vw;
+}

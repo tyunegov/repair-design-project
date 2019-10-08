@@ -1,0 +1,22 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+@import '../abstracts/function';
+
+header{
+    width: 100%;
+    height: size-375(57);
+    grid-column: 2/3;
+    @include grid_2column;
+    grid-template-columns: 60% 40%;
+    h1{
+        @include header_text;
+        color: $yellow-color;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .cellphone{
+        @include header_text;
+        color: white;
+        text-align: right;
+    }
+}

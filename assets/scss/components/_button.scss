@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+@import '../abstracts/function';
+.button_yellow{
+    background: $yellow-color;
+    border: 0;
+    @include text_button;
+    cursor:pointer;
+}
+
+.button_transparent{
+    background: transparent;
+    border: 1px solid white;
+    @include text_button;
+    cursor:pointer;
+}
+
+.button_round{
+  /*  width: size-1440(54.72);
+    height: size-1440(54.72);*/
+    width: size-375(36);
+    height: size-375(36);
+
+    cursor: pointer;
+    background: $yellow-color;
+    border-radius: 50%;
+    border-width: 0;
+    text-align: center;
+    justify-content: center;
+    
+    @media (max-width: 375px) {
+        width: size-375(36);
+        height: size-375(36);
+    }
+    
+}
