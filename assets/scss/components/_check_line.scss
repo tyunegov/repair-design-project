@@ -1,0 +1,31 @@
+@import '../abstracts/variables';
+
+.check_line_label{
+    margin-top: size-375(26.5);
+    display: grid;
+    grid-template-columns: 0 size-375(27) auto;
+    text-align: left;
+}
+
+.checked{
+    width: size-375(18);
+    height: size-375(18);
+    background: $yellow-color;
+}
+
+.checkbox{
+    appearance: none;
+}
+
+.checkbox:checked +.checked{
+    background-image: url(../images/feedback/check.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feedback .button_yellow{
+    width: 100%;
+    margin-top: size-375(63);
+    font-size: size-375(15);
+}

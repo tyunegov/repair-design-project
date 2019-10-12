@@ -78,6 +78,35 @@ h3 {
       width: 9.6vw;
       height: 9.6vw; } }
 
+.check_line_label {
+  margin-top: 7.06667vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0 7.2vw auto;
+  grid-template-columns: 0 7.2vw auto;
+  text-align: left; }
+
+.checked {
+  width: 4.8vw;
+  height: 4.8vw;
+  background: #E3B873; }
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.checkbox:checked + .checked {
+  background-image: url(../images/feedback/check.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.feedback .button_yellow {
+  width: 100%;
+  margin-top: 16.8vw;
+  font-size: 4vw; }
+
 header {
   width: 100%;
   height: 15.2vw;
@@ -105,18 +134,49 @@ header {
     text-align: right; }
 
 body {
-  background-color: #1f1f1f;
+  background: #1f1f1f;
+  opacity: 0.57;
   display: -ms-grid;
   display: grid;
   margin: 0;
   -ms-grid-columns: 4.8vw 1fr 4.8vw;
   grid-template-columns: 4.8vw 1fr 4.8vw;
-  opacity: 0.7;
   font-family: FuturaBookC;
   color: white;
   text-align: center;
   font-size: 3.73333vw;
   line-height: 5.86667vw; }
+
+.background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 24, 24, 0.57); }
+
+.gallery {
+  margin-top: 9.6vw;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 64.4vw; }
+  .gallery img {
+    width: 1.66933vw;
+    height: 2.92267vw; }
+  .gallery .left {
+    margin-left: 3.73333vw; }
+  .gallery .right {
+    margin-right: 3.73333vw;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -ms-grid-column-align: end;
+    justify-self: end; }
 
 section, form {
   -ms-grid-column: 2;
@@ -187,35 +247,14 @@ section, form {
   .example .project_description {
     margin-top: 5.86667vw; }
   .example .gallery {
-    margin-top: 9.6vw;
-    background-image: url(../images/example/image-1.png);
-    background-size: cover;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 64.4vw; }
-    .example .gallery img {
-      width: 1.66933vw;
-      height: 2.92267vw; }
-    .example .gallery .left {
-      margin-left: 3.73333vw; }
-    .example .gallery .right {
-      margin-right: 3.73333vw;
-      -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-      transform: rotate(-180deg);
-      -ms-grid-column-align: end;
-      justify-self: end; }
+    background-image: url(../images/example/image-1.png); }
   .example .pulce {
     margin-top: 9.72vw;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 7.2vw; }
   .example .pulce_desc {
     display: -ms-grid;
     display: grid;
@@ -262,3 +301,72 @@ section, form {
   .header_section .header_section_logo .logo {
     width: 8.73867vw;
     margin: auto 2.52533vw; }
+
+.feedback {
+  width: 100%; }
+
+.field {
+  margin-top: 10.66667vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: left; }
+  .field .editBox {
+    background: transparent;
+    font-size: 4.8vw;
+    border: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 2.13333vw;
+    color: white; }
+  .field .editBox::-webkit-input-placeholder {
+    color: white; }
+  .field .editBox:-ms-input-placeholder {
+    color: white; }
+  .field .editBox::-ms-input-placeholder {
+    color: white; }
+  .field .editBox::placeholder {
+    color: white; }
+
+.typesOfRepair {
+  margin-top: 15.46667vw;
+  -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05); }
+  .typesOfRepair h2 {
+    color: #181818; }
+  .typesOfRepair .photo {
+    width: 100%; }
+
+.types {
+  margin-bottom: 47.46667vw; }
+
+.types_description {
+  width: 72vw;
+  position: absolute;
+  margin-top: -37.86667vw;
+  background: white;
+  color: black;
+  text-align: left; }
+  .types_description h3 {
+    font-size: 4vw;
+    color: #363636; }
+  .types_description .list {
+    margin-top: 5.6vw;
+    margin-left: 8.26667vw; }
+  .types_description ul {
+    padding: 0;
+    padding-left: 4vw;
+    color: #959595; }
+  .types_description .types_button {
+    width: 50.66667vw;
+    height: 10.66667vw;
+    -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center; }
+
+.realize .gallery {
+  background-image: url(../images/realize/image-1.png); }
